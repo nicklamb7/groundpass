@@ -1,0 +1,21 @@
+#facilities-index-page {
+  min-height: 100vh;
+  background-color: #fff;
+  padding: 80px 16px 16px 16px;
+  ul {
+    list-style-type: none;
+    padding: 0px;
+  }
+  li {
+    border-top: 1px solid #e1e1e1;
+    padding: 16px;
+  }
+  .map-wrapper {
+    background-color: #f7f7f8;
+    position: fixed;
+    top: 80px;
+    right: 0px;
+    height: 95vh;
+    padding: 0px;
+  }
+}

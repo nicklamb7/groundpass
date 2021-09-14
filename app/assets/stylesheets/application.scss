@@ -7,7 +7,16 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@700&display=swap');
+
 
 // Your CSS partials
 @import "components/index";
+@import "components/navbar";
 @import "pages/index";
+@import "pages/home";
+@import "facilities/index";
+
+* {
+  font-weight: 300;
+}

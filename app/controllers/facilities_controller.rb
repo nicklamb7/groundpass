@@ -4,6 +4,14 @@ class FacilitiesController < ApplicationController
   # GET /facilities or /facilities.json
   def index
     @facilities = Facility.all
+
+    # the `geocoded` scope filters only flats with coordinates (latitude & longitude)
+    @markers = @facilities.geocoded.map do |facility|
+      {
+        lat: facility.latitude,
+        lng: facility.longitude
+      }
+    end
   end
 
   # GET /facilities/1 or /facilities/1.json
