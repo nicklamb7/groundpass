@@ -1,0 +1,11 @@
+<div id="organisation-index-page">
+<ul>
+  <% @organisations.each do |organisation| %>
+    <li>
+      <p><%= organisation.name %></p>
+      <p><%= organisation.summary %></p>
+      <p><%= link_to 'Show', organisation %> · <%= link_to 'Edit', edit_organisation_path(organisation) %> · <%= link_to 'Destroy', organisation, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    </li>
+  <% end %>
+</ul>
+</div>

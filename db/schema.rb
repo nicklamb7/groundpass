@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_14_205201) do
+ActiveRecord::Schema.define(version: 2021_09_15_225923) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,10 +24,19 @@ ActiveRecord::Schema.define(version: 2021_09_14_205201) do
     t.integer "price"
     t.text "summary"
     t.integer "facility_type"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "organisation_id", null: false
+    t.index ["organisation_id"], name: "index_facilities_on_organisation_id"
+  end
+
+  create_table "organisations", force: :cascade do |t|
+    t.string "name"
+    t.text "summary"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_facilities_on_user_id"
+    t.index ["user_id"], name: "index_organisations_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -42,5 +51,6 @@ ActiveRecord::Schema.define(version: 2021_09_14_205201) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "facilities", "users"
+  add_foreign_key "facilities", "organisations"
+  add_foreign_key "organisations", "users"
 end

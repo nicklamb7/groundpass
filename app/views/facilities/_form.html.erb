@@ -1,5 +1,5 @@
 
-<%= simple_form_for(@facility) do |f| %>
+<%= simple_form_for [ @organisation, @facility ] do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
@@ -12,7 +12,7 @@
     <%= f.input :price %>
     <%= f.input :summary %>
     <%= f.input :facility_type %>
-    <%= f.association :user %>
+    <%= f.association :organisation %>
   </div>
 
   <div class="form-actions">

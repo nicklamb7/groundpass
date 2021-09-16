@@ -41,8 +41,9 @@
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @facility.user_id %>
+  <strong>Organisation:</strong>
+  <%= @facility.organisation_id %>
+  <%= link_to 'Show', organisation_path(@facility.organisation_id) %>
 </p>
 
 <%= link_to 'Edit', edit_facility_path(@facility) %> |
