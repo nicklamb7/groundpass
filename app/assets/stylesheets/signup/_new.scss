@@ -1,0 +1,60 @@
+#sign-up-page,
+#sign-in-page {
+  padding: 80px 16px 16px 16px;
+  min-height: 100vh;
+  background-color: #fff;
+  .sign-up-container,
+  .sign-in-container {
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+  }
+  .shape {
+    height: 180px;
+    width: 180px;
+    position: absolute;
+    border-radius: 50%;
+  }
+  #first-child {
+    background: linear-gradient(
+        #008001,
+        #00800180
+    );
+    left: -50px;
+    top: -50px;
+  }
+  .shape:last-child {
+    background: linear-gradient(
+        to right,
+        #008001,
+        #00800180
+    );
+    right: -75px;
+    bottom: -75px;
+  }
+  .sign-up-form,
+  .sign-in-form {
+    height: 520px;
+    width: 400px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 40px rgba(8,7,16,0.2);
+    padding: 50px 35px;
+    z-index: 300;
+  }
+  input {
+    background-color: rgba(255,255,255,0.20);
+    border-radius: 4px !important;
+  }
+  h2 {
+    text-align: center;
+  }
+}

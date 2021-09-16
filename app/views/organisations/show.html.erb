@@ -1,0 +1,27 @@
+<div id="organisation-show-page">
+<h1> <%= @organisation.name %> </h1>
+<div class="row">
+    <div class="col-7">
+  <ul>
+    <% @organisation.facilities.each do |facility| %>
+      <li>
+        <p><%= facility.name %> · £<%= facility.price %>.00</p>
+        <p><small><%= facility.address %></small></p>
+        <p><%= facility.rating %>⭐️</p>
+        <p><%= facility.facility_type %></p>
+        <p><%= link_to 'Show', facility %> ·
+         <%= link_to 'Edit', edit_facility_path(facility) %> ·
+         <%= link_to 'Destroy', facility, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      </li>
+    <% end %>
+    <%= link_to 'New Facility', new_facility_path %>
+  </ul>
+</div>
+  <div class="col-5 map-wrapper">
+    <div id="map"
+    style="width: 100%; height: 95vh;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="pk.eyJ1IjoibmljazIzNDIzNDIiLCJhIjoiY2t0a21iMjZ4MW15djJvcGV6YTI5aWY5aiJ9.OZDeEP0MNwd2sAN-SQUUkg"></div>
+  </div>
+</div>
+</div>

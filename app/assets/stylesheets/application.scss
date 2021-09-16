@@ -8,6 +8,7 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 
 // Your CSS partials
@@ -16,7 +17,24 @@
 @import "pages/index";
 @import "pages/home";
 @import "facilities/index";
+@import "organisations/index";
+@import "organisations/show";
+@import "signup/new";
 
-* {
+*,
+h2,
+h3,
+h4,
+h5,
+h6
+ {
   font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+      font-family:"Circular Std Black";
+      font-weight: 900;
+      font-size: 48px;
+      font-style: normal;
 }

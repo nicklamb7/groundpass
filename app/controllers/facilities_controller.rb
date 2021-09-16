@@ -20,6 +20,7 @@ class FacilitiesController < ApplicationController
 
   # GET /facilities/new
   def new
+    @organisation = Organisation.find(params[:organisation_id])
     @facility = Facility.new
   end
 
@@ -30,7 +31,8 @@ class FacilitiesController < ApplicationController
   # POST /facilities or /facilities.json
   def create
     @facility = Facility.new(facility_params)
-
+    @organisation = Organisation.find(params[:organisation_id])
+    @facility.organisation = @organisation
     respond_to do |format|
       if @facility.save
         format.html { redirect_to @facility, notice: "Facility was successfully created." }
