@@ -29,7 +29,7 @@ class FacilitiesController < ApplicationController
 
   # GET /facilities/new
   def new
-    @organisation = Organisation.find(params[:organisation_id])
+    # @organisation = Organisation.find(params[:organisation_id])
     @facility = Facility.new
   end
 
