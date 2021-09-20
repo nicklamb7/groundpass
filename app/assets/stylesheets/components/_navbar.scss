@@ -13,7 +13,9 @@
     font-family: 'Urbanist', sans-serif;
     font-weight: 700;
     font-size: 28px;
-    color: green;
+    background: -webkit-linear-gradient(lightgreen, green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   .search-bar input {
     width: 400px;
