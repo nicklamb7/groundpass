@@ -12,6 +12,15 @@ class FacilitiesController < ApplicationController
         lng: facility.longitude
       }
     end
+
+    if params[:query].present?
+      @facilities = @facilities.where('name ILIKE ?', "%#{params[:query]}%")
+    end
+
+    respond_to do |format|
+      format.html # Follow regular flow of Rails
+      format.text { render partial: 'list.html', locals: { facilities: @facilites } }
+    end
   end
 
   # GET /facilities/1 or /facilities/1.json
