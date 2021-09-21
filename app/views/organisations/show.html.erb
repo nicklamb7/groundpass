@@ -10,11 +10,11 @@
         <p><%= facility.rating %>⭐️</p>
         <p><%= facility.facility_type %></p>
         <p><%= link_to 'Show', facility %> ·
-         <%= link_to 'Edit', edit_facility_path(facility) %> ·
+         <%= link_to 'Edit', edit_organisation_facility_path(:organisation_id, facility) %> ·
          <%= link_to 'Destroy', facility, method: :delete, data: { confirm: 'Are you sure?' } %></p>
       </li>
     <% end %>
-    <%= link_to 'New Facility', new_facility_path %>
+    <%= link_to 'New Facility', new_organisation_facility_path(:organisation_id, :facility) %>
   </ul>
 </div>
   <div class="col-5 map-wrapper">

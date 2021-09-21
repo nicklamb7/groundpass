@@ -46,5 +46,5 @@
   <%= link_to 'Show', organisation_path(@facility.organisation_id) %>
 </p>
 
-<%= link_to 'Edit', edit_facility_path(@facility) %> |
+<%= link_to 'Edit', edit_organisation_facility_path(:organisation_id, :facility)  %> |
 <%= link_to 'Back', facilities_path %>
