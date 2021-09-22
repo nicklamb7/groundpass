@@ -14,7 +14,7 @@
          <%= link_to 'Destroy', facility, method: :delete, data: { confirm: 'Are you sure?' } %></p>
       </li>
     <% end %>
-    <%= link_to 'New Facility', new_organisation_facility_path(:organisation_id, :facility) %>
+    <%= link_to 'New Facility', new_organisation_facility_path(@organisation) %>
   </ul>
 </div>
   <div class="col-5 map-wrapper">
