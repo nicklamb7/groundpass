@@ -5,11 +5,13 @@
         <img src="" alt="">
       </div>
       <div>
-        <p><%= facility.name %> · £<%= facility.price %>.00</p>
+        <p><small>Organisation Name</small></p>
+        <p><%= link_to "#{facility.name}", facility %></p>
         <p><small><%= facility.address %></small></p>
-        <p><%= facility.rating %>⭐️</p>
+        <p>£<%= facility.price %>.00 ·
+        <%= facility.rating %>⭐️</p>
         <p><%= facility.facility_type %></p>
-        <p><%= link_to 'Show', facility %> ·
+        <p>
           <%= link_to 'Edit', edit_organisation_facility_path(:organisation_id, facility) %> ·
           <%= link_to 'Destroy', facility, method: :delete, data: { confirm: 'Are you sure?' } %>
         </p>
