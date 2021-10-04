@@ -1,9 +1,10 @@
 <div id="facilities-show-page">
   <p id="notice"><%= notice %></p>
   <div class="facility-name">
-    <h1>
+    <%= link_to "#{@facility.organisation.name}", organisation_path(@facility.organisation_id) %>
+    <h2>
       <%= @facility.name %>
-    </h1>
+    </h2>
   </div>
   <div>
     <p>
@@ -30,11 +31,6 @@
   <p>
     <strong>Facility type:</strong>
     <%= @facility.facility_type %>
-  </p>
-  <p>
-    <strong>Organisation:</strong>
-    <%= @facility.organisation_id %>
-    <%= link_to 'Show', organisation_path(@facility.organisation_id) %>
   </p>
   <div>
     <h2>
