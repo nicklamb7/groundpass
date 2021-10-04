@@ -1,14 +1,19 @@
 <ul data-search-facilities-target="list">
   <% @facilities.each do |facility| %>
     <li>
-      <p><%= facility.name %> · £<%= facility.price %>.00</p>
-      <p><small><%= facility.address %></small></p>
-      <p><%= facility.rating %>⭐️</p>
-      <p><%= facility.facility_type %></p>
-      <p><%= link_to 'Show', facility %> ·
-        <%= link_to 'Edit', edit_organisation_facility_path(:organisation_id, facility) %> ·
-        <%= link_to 'Destroy', facility, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </p>
+      <div class="image-wrapper">
+        <img src="" alt="">
+      </div>
+      <div>
+        <p><%= facility.name %> · £<%= facility.price %>.00</p>
+        <p><small><%= facility.address %></small></p>
+        <p><%= facility.rating %>⭐️</p>
+        <p><%= facility.facility_type %></p>
+        <p><%= link_to 'Show', facility %> ·
+          <%= link_to 'Edit', edit_organisation_facility_path(:organisation_id, facility) %> ·
+          <%= link_to 'Destroy', facility, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </p>
+      </div>
     </li>
   <% end %>
 </ul>
