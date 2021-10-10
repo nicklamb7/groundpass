@@ -83,6 +83,6 @@ class FacilitiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def facility_params
-      params.require(:facility).permit(:name, :address, :rating, :latitude, :longitude, :price, :summary, :facility_type, :user_id)
+      params.require(:facility).permit(:name, :address, :rating, :latitude, :longitude, :price, :summary, :facility_type, :user_id, :photo)
     end
 end

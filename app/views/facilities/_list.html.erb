@@ -1,7 +1,7 @@
 <ul data-search-facilities-target="list">
   <% @facilities.each do |facility| %>
     <li>
-      <div class="image-wrapper">
+      <div class="image-wrapper" style="background-image: url('<%= cl_image_path facility.photo.key, height: 400, crop: :fill if facility.photo.attached? %>')" >
         <img src="" alt="">
       </div>
       <div>

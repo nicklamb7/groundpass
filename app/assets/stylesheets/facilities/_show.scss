@@ -3,11 +3,24 @@
   min-height: calc(100vh - 80px);
   margin-top: 80px;
   padding: 32px 160px;
+  h2 {
+    margin: 12px 0px;
+  }
   .image-wrapper {
     height: 50vh;
     width: 100%;
     background-color: #f7f7f8;
     border-radius: 12px;
     margin: 16px 0px;
+    background-size: cover !important;
+    background-position: center;
+  }
+  .facility-date-container {
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
+    padding: 16px;
+    border-radius: 12px;
+    margin: 16px 0px;
+    position: sticky;
+    top: 104px;
   }
 }

@@ -16,36 +16,40 @@
       <%= @facility.address %>
     </p>
   </div>
-  <div>
-    <div class="image-wrapper">
-      <img src="" alt="">
-    </div>
-  </div>
-  <p>
-    £<%= @facility.price %>
-  </p>
-  <strong>Facility type:</strong><%= @facility.facility_type %>
-  <p>
-    <%= @facility.summary %>
-  </p>
-  <p>
-    <strong>Facility type:</strong>
-    <%= @facility.facility_type %>
-  </p>
-  <div>
-    <h2>
-      Select a date
-    </h2>
-    <div>
+  <div class="row">
+    <div class="col-8">
+      <div class="image-wrapper"  style="background-image: url('<%= cl_image_path @facility.photo.key, height: 800, crop: :fill if @facility.photo.attached? %>')">
+        <img src="" alt="">
+      </div>
       <p>
-        Check-in
+        £<%= @facility.price %>
       </p>
-      <input type="date" placeholder="Add date">
+      <strong>Facility type:</strong><%= @facility.facility_type %>
+      <p>
+        <%= @facility.summary %>
+      </p>
+      <p>
+        <strong>Facility type:</strong>
+        <%= @facility.facility_type %>
+      </p>
     </div>
-    <button>
-      Check availability
-    </button>
+    <div class="col-4">
+      <div class="facility-date-container">
+        <h3>
+          Select a date
+        </h3>
+        <div>
+          <p>
+            Check-in
+          </p>
+          <input type="date" placeholder="Add date">
+        </div>
+        <button>
+          Check availability
+        </button>
+      </div>
+    </div>
   </div>
   <%= link_to 'Edit', edit_organisation_facility_path(:organisation_id, :facility)  %> |
   <%= link_to 'Back', facilities_path %>
-</div>
+</>
