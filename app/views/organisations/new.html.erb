@@ -2,6 +2,5 @@
 <%= simple_form_for [ @user, @organisation ] do |f| %>
   <%= f.input :name %>
   <%= f.input :summary %>
-  <%= f.association :user %>
   <%= f.submit "Submit review", class: "btn btn-primary" %>
 <% end %>

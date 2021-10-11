@@ -9,6 +9,7 @@ class OrganisationsController < ApplicationController
 
   def create
     @organisation = Organisation.new(organisation_params)
+    @organisation.user = current_user
     # @user = User.find(params[:user_id])
     # @organisation.user = @user
     @organisation.save
