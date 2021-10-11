@@ -1,9 +1,9 @@
   <ul data-search-organisations-target="list">
     <% @organisations.each do |organisation| %>
       <li>
-        <p><%= organisation.name %></p>
+        <h4><%= link_to "#{organisation.name}", organisation %></h4>
         <p><%= organisation.summary %></p>
-        <p><%= link_to 'Show', organisation %> · <%= link_to 'Edit', edit_organisation_path(organisation) %> · <%= link_to 'Destroy', organisation, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        <p><small><%= link_to 'Edit', edit_organisation_path(organisation) %> · <%= link_to 'Destroy', organisation, method: :delete, data: { confirm: 'Are you sure?' } %></small></p>
       </li>
     <% end %>
   </ul>
