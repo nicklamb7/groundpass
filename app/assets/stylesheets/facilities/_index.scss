@@ -63,3 +63,14 @@
     margin-left: -200px;
   }
 }
+
+@media only screen and (max-width: 576px) {
+  #facilities-index-page li {
+    flex-direction: column;
+    padding-right: 0px;
+    .image-wrapper {
+      width: 100%;
+      margin-bottom: 8px;
+    }
+  }
+}

@@ -17,7 +17,7 @@
               <%= facility.rating %>⭐️</p>
               <p><%= facility.facility_type %></p>
               <p>
-                <%= link_to 'Edit', edit_organisation_facility_path(organisation_id: facility.organisation_id, id: facility.id) %> ·
+                <%= link_to 'Edit', edit_organisation_facility_path(organisation_id: @organisation, id: facility) %> ·
                 <%= link_to 'Destroy', facility, method: :delete, data: { confirm: 'Are you sure?' } %>
               </p>
             </div>

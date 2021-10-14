@@ -50,6 +50,6 @@
       </div>
     </div>
   </div>
-  <%= link_to 'Edit', edit_organisation_facility_path(:organisation_id, :facility)  %> |
+  <%= link_to 'Edit', edit_organisation_facility_path(organisation_id: @facility.organisation_id, facility_id: @facility.id)  %> |
   <%= link_to 'Back', facilities_path %>
 </>
