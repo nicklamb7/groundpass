@@ -1,0 +1,31 @@
+#bottom-nav {
+  width: 100vw;
+  height: 64px;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0px;
+  z-index: 1000;
+  box-shadow: 0 -2px 12px 4px #00000010;
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    padding: 0px;
+    li {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #bottom-nav {
+    display: none;
+  }
+}
