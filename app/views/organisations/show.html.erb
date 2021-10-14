@@ -26,7 +26,7 @@
         <%= link_to 'New Facility', new_organisation_facility_path(@organisation) %>
       </ul>
     </div>
-    <div class="d-md-none d-lg-block col-lg-5 map-wrapper">
+    <div class="d-none d-lg-block col-lg-5 map-wrapper">
       <div id="map"
       style="width: 100%; height: 95vh;"
       data-markers="<%= @markers.to_json %>"
