@@ -73,4 +73,9 @@
       margin-bottom: 8px;
     }
   }
+  #facilities-index-page .facilities-search-bar input {
+    width: calc(100vw - 32px);
+    margin-left: calc(-50vw + 16px);
+    top: 64px;
+  }
 }

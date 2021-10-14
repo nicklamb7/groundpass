@@ -90,4 +90,16 @@
       display: none;
     }
   }
+  .navbar-bottom {
+    background-color: white;
+    height: 56px;
+    box-shadow: 0px 3px 4px #00000010;
+    // border-bottom: 1px solid #e1e1e1;
+    position: fixed;
+    top: 62px;
+    left: 0px;
+    width: 100vw;
+    z-index: 900;
+    padding: 0px 16px;
+  }
 }
