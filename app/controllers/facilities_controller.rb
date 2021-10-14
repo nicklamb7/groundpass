@@ -1,4 +1,5 @@
 class FacilitiesController < ApplicationController
+  skip_before_action :authenticate_user!, only: %i[ index show ]
   before_action :set_facility, only: %i[ show edit update destroy ]
 
   # GET /facilities or /facilities.json
