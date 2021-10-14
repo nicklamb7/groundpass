@@ -63,15 +63,30 @@
   }
 }
 
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
-}
-
-.navbar-lewagon .navbar-collapse {
+.navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-brand img {
   width: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+  #navbar {
+    padding: 0px 32px;
+    display: flex;
+    .search-bar {
+      display: none;
+    }
+    .navbar-left,
+    .navbar-right {
+      width: 100px;
+    }
+    .navbar-left-link {
+      display: none;
+    }
+    .search-bar input {
+      display: none;
+    }
+  }
 }
