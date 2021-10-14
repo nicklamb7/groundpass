@@ -1,35 +1,36 @@
 <div id="organisation-show-page">
-<p><small><%= @organisation.facilities.count %> facilities</small></p>
-<h2> <%= @organisation.name %> </h2>
-<p><%= @organisation.summary %></p>
-<div class="row">
-  <div>
-    <ul>
-      <% @organisation.facilities.each do |facility| %>
-        <li>
-          <div class="image-wrapper">
-            <img src="" alt="">
-          </div>
-          <div>
-            <p><%= link_to "#{facility.name}", facility %></p>
-            <p><small><%= facility.address %></small></p>
-            <p>£<%= facility.price %>.00 ·
-            <%= facility.rating %>⭐️</p>
-            <p><%= facility.facility_type %></p>
-            <p>
-              <%= link_to 'Edit', edit_organisation_facility_path(organisation_id: facility.organisation_id, id: facility.id) %> ·
-              <%= link_to 'Destroy', facility, method: :delete, data: { confirm: 'Are you sure?' } %>
-            </p>
-          </div>
-        </li>
-      <% end %>
-      <%= link_to 'New Facility', new_organisation_facility_path(@organisation) %>
-    </ul>
-  </div>
-    <div id="map"
-      style="width: 100%; height: 400px;"
+  <p><small><%= @organisation.facilities.count %> facilities</small></p>
+  <h2> <%= @organisation.name %> </h2>
+  <p><%= @organisation.summary %></p>
+  <div class="row">
+    <div class="col-12 col-lg-7">
+      <ul>
+        <% @organisation.facilities.each do |facility| %>
+          <li>
+            <div class="image-wrapper">
+              <img src="" alt="">
+            </div>
+            <div>
+              <p><%= link_to "#{facility.name}", facility %></p>
+              <p><small><%= facility.address %></small></p>
+              <p>£<%= facility.price %>.00 ·
+              <%= facility.rating %>⭐️</p>
+              <p><%= facility.facility_type %></p>
+              <p>
+                <%= link_to 'Edit', edit_organisation_facility_path(organisation_id: facility.organisation_id, id: facility.id) %> ·
+                <%= link_to 'Destroy', facility, method: :delete, data: { confirm: 'Are you sure?' } %>
+              </p>
+            </div>
+          </li>
+        <% end %>
+        <%= link_to 'New Facility', new_organisation_facility_path(@organisation) %>
+      </ul>
+    </div>
+    <div class="d-md-none d-lg-block col-lg-5 map-wrapper">
+      <div id="map"
+      style="width: 100%; height: 95vh;"
       data-markers="<%= @markers.to_json %>"
       data-mapbox-api-key="pk.eyJ1IjoibmljazIzNDIzNDIiLCJhIjoiY2t0a21iMjZ4MW15djJvcGV6YTI5aWY5aiJ9.OZDeEP0MNwd2sAN-SQUUkg"></div>
+    </div>
   </div>
-</div>
 </div>
