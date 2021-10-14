@@ -18,14 +18,14 @@
   <p><big>Facilities in the UK</big></p>
 
   <div class="row">
-    <div class="col-7">
+    <div class="col-12 col-lg-7">
       <%= render 'facilities/list' %>
     </div>
-    <div class="col-5 map-wrapper">
+    <div class="d-md-none d-lg-block map-wrapper">
       <div id="map"
-      style="width: 100%; height: 95vh;"
-      data-markers="<%= @markers.to_json %>"
-      data-mapbox-api-key="pk.eyJ1IjoibmljazIzNDIzNDIiLCJhIjoiY2t0a21iMjZ4MW15djJvcGV6YTI5aWY5aiJ9.OZDeEP0MNwd2sAN-SQUUkg"></div>
+        style="width: 100%; height: 95vh;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="pk.eyJ1IjoibmljazIzNDIzNDIiLCJhIjoiY2t0a21iMjZ4MW15djJvcGV6YTI5aWY5aiJ9.OZDeEP0MNwd2sAN-SQUUkg"></div>
     </div>
   </div>
 
