@@ -63,3 +63,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'geocoder'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary'
+gem 'rails_real_favicon'
