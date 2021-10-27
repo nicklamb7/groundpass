@@ -45,6 +45,13 @@
     width: 400px;
     display: flex;
     align-items: center;
+    .navbar-nav {
+      display: flex !important;
+      flex-direction: row;
+      .nav-link {
+        margin: 0px 12px;
+      }
+    }
   }
   .navbar-right {
     width: 400px;
