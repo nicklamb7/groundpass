@@ -28,10 +28,12 @@
     }
     h5 {
       line-height: 1.3em;
+      margin-bottom: 32px;
     }
-    button {
-      height: 44px;
-      width: 125px;
+    .get-started-btn {
+      height: 44px !important;
+      width: 125px !important;
+      padding: 10px 16px;
       font-size: 16px;
       color: 16px;
       background-color: green;
@@ -53,6 +55,11 @@
     }
     .left-section {
       padding-left: 120px;
+      text-align: center;
+    }
+    .right-section {
+      padding-right: 120px;
+      text-align: center;
     }
 
   }
@@ -86,13 +93,36 @@
     background-position: center;
     margin-left: 0px;
   }
-  .section-image-wrapper {
-    background-color: #f7f7f8;
+  .first-section .section-image-wrapper {
     height: 360px;
     width: 360px;
     border-radius: 12px;
     box-shadow: 0 15px 50px 20px rgba(51, 51, 79, 0.12);
     background-image: asset-url('tennis_court.png');
+    background-color: #BAD8B7;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+  }
+  .middle-section .section-image-wrapper {
+    height: 360px;
+    width: 360px;
+    border-radius: 12px;
+    box-shadow: 0 15px 50px 20px rgba(51, 51, 79, 0.12);
+    background-image: asset-url('multi_court.png');
+    background-color: #BAD8B7;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+  }
+  .last-section .section-image-wrapper {
+    height: 360px;
+    width: 360px;
+    border-radius: 12px;
+    box-shadow: 0 15px 50px 20px rgba(51, 51, 79, 0.12);
+    background-image: asset-url('golf.png');
     background-color: #BAD8B7;
     background-repeat: no-repeat;
     background-size: cover;
