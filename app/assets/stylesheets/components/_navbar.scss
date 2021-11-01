@@ -18,7 +18,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  .search-bar input {
+  .search-bar {
     width: 400px;
     height: 44px;
     -webkit-appearance: none;
@@ -37,9 +37,21 @@
     line-height: 22px;
     font-weight: 300;
   }
-  .navbar-middle input {
+  .navbar-search-bar {
+    position: relative;
+  }
+  .navbar-middle form {
     display: flex;
     align-items: center;
+    .submit-btn {
+      position: absolute;
+      right: 8px;
+      background-color: transparent;
+      border: none;
+      color: #008001;
+      font-size: 15px;
+      font-weight: 300;
+    }
   }
   .navbar-left {
     width: 400px;

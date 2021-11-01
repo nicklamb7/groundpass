@@ -12,17 +12,18 @@
           <%= link_to "Facilities", "/facilities", class: "nav-link" %>
         </li>
       </ul>
-
-      <%# <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button> %>
     </div>
 
     <div class="navbar-middle">
       <div class="navbar-search-bar">
-        <form class="search-bar">
-          <input type="text" placeholder="Search...">
-        </form>
+        <%= form_tag facilities_path, method: :get do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control search-bar",
+            placeholder: "Search facilities..."
+          %>
+          <%= submit_tag "Search", class: "submit-btn" %>
+        <% end %>
       </div>
     </div>
 
