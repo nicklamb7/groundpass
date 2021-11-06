@@ -81,6 +81,9 @@
       left: 400px !important;
   }
   }
+  .banner {
+    height: calc(100vh - 220px);
+  }
   .banner .section-image-wrapper {
     background-color: #f7f7f8;
     height: 400px;
